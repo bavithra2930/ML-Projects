@@ -1,0 +1,37 @@
+Key findings of the analysis
+
+
+About dataset:
+
+'Transaction ID'  -  Primary key in the dataset
+'Customer ID'     -  Primary key
+'Transaction Amount'
+'Transaction Date'
+'Payment Method',  - Credit card,debit card,paypal,bank transfer
+'Product Category' - Clothing,home & garden,toys & games,electronics,health & beauty
+'Quantity'  
+'Customer Age'
+'Customer Location'
+'Device Used'      
+'IP Address',
+'Shipping Address' -No dependency or contributon for predicting fradulent transactions
+'Billing Address'-No dependency or contributon for predicting fradulent transactions
+'Is Fraudulent' -dependent or predictive feature
+'Account Age Days'
+'Transaction Hour' -24 hour format
+
+1)The dataset is imbalanced dataset i.e only 1222  fraudlent transcations reported out of 23k transactions
+
+Handling:After training and prediction to check performance dont use accuracy as majority will dominate
+use recall or precision
+Approach 2:
+Use sampling techniques like smote to make imbalnced data to balanced data
+
+
+2)No dependency for fraudluent transcation on type of payment method customer is using in doing payment (credit card,debit card,paypal,bank transfer)
+
+3)Product category also didnt have dependency in predicting fradulent transcation,age is also not showing that much effect but people whi are in age group 20-45 are more doing fradulent transactions as they are more aware of the latest technolgies in the market
+
+4)Now comes Transaction amount this feature have a significant impact on the fraudluent transcations
+5)All transcations are happened in the year 2024 so transaction date will not contribute that much to predict whether fraud happened or not
+6)#Credit card trans have more fraud trans  so to mitigate that 3-d secure and strong customer authentication is implemented in our product
