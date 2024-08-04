@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>Crop Prediction</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+body {
+   margin: 0px;
+   padding: 0px;
+   overflow: hidden;
+}
+
+.wrapper {
+    
+  background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -ms-content-zooming: none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    
+}
+.container {
+  height: 100%;
+  position: absolute;
+  left: 20%;
+  right: 20% 
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+ 
+.transbox {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+    position: absolute;
+  width: 70%;
+  height: 100%;
+  z-index: 2;
+   text-align: center;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <img class="mySlides" src="https://wallpapercave.com/wp/wp3973339.jpg">
+
+  <img class="mySlides" src="https://wallpaperaccess.com/full/1322377.jpg">
+
+    
+  <img class="mySlides" src="https://wallpaperbat.com/img/96382-apple-tree-wallpaper-top-free-apple-tree-background.jpg" >
+
+  <img class="mySlides" src="https://www.hdwallpapers.in/download/berry_fruit_grapes_kiwi_mango_still_life_strawberry_4k_5k_hd_fruit-1920x1080.jpg">
+
+  <img class="mySlides" src="https://cdn.wallpapersafari.com/74/68/4lrfTG.jpg">
+
+  <img class="mySlides" src="https://images.wallpaperscraft.com/image/single/watermelon_fruit_heart_172037_1920x1080.jpg">
+  
+  <img class="mySlides" src="https://images.wallpaperscraft.com/image/single/oranges_fruit_orange_tree_citrus_107241_1920x1080.jpg">
+  
+  <img class="mySlides" src="https://thumbs.dreamstime.com/z/group-lentils-23076881.jpg">
+
+  <img class="mySlides" src="https://wallpaperaccess.com/full/1597889.jpg">
+
+  <img class="mySlides" src="https://wallpaperaccess.com/full/2446212.jpg">
+
+  <img class="mySlides" src="https://wallpapercave.com/wp/wp5698463.jpg" >
+
+
+  
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+  
+  <h3 style="font-family:Candara; text-align:center"></h3>
+  <div class="container">
+    <div class="transbox" >
+      <h1 style="color:white; font-family:Candara; text-align:center">Crop Prediction</h1>
+
+      <br><br><br><br><br><br><br><br><br>
+      <h3 style="font-family:Candara; color:white"> {{ output }}</h3>
+
+      </div>
+     </div>  
+  </div>
+  </div>
+  </body>
+  </html>
